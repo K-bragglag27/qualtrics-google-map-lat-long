@@ -102,7 +102,9 @@ const initGoogleMapsQuestion = (
         if (place.geometry) {
           mapMarker.setPosition(place.geometry.location);
           googleMap.panTo(place.geometry.location);
+          googleMap.setZoom(13);
           setLatLng(index, place.geometry.location);
+         
         } else {
           alert(marker.autocomplete?.invalidLocationAlertText || 'Invalid Location');
         }
